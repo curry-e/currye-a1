@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Confirmation Page{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Override Form Submitted</h1>
+    <h4>Summary of Data Recorded</h4>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th scope="row">Full Name</th>
+                <td>{{form.name.data}}</td>
+            </tr>
+            <tr>
+                <th scope="row">V Number</th>
+                <td>{{form.vid.data}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Email Address</th>
+                <td>{{form.email.data}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Year</th>
+                <td>{{form.year.data}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Semester</th>
+                <td>{{form.semester.data}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Course CRN</th>
+                <td>{{form.crn.data}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Reason</th>
+                <td>{{form.reason.data}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-warning" href=" {{ url_for('index') }} ">New Form</a>
+</div>
+{% endblock %}
